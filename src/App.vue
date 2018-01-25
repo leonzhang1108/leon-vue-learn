@@ -1,25 +1,26 @@
 <template>
-  <Layout class="app-wrapper">
-    <Sider hide-trigger>Sider</Sider>
-    <Layout>
-      <Header>Header</Header>
-      <Content>Content</Content>
-      <Footer>Footer</Footer>
-    </Layout>
-  </Layout>
+  <AppWrapper>
+    <router-view/>
+  </AppWrapper>
 </template>
 
 <script>
+import AppWrapper from '@/components/AppWrapper'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppWrapper
+  }
 }
 </script>
 
 <style lang="less">
 @import './styles/theme.less';
 html,
-body,
-.app-wrapper {
+body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 </style>
