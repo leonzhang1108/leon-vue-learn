@@ -5,8 +5,15 @@ import App from './App'
 import router from './router'
 import store from './store'
 import Title from './mixin/Title'
+import { Layout, Sider, Header, Content, Footer } from 'iview'
 
 Vue.config.productionTip = false
+
+Vue.component('Layout', Layout)
+Vue.component('Sider', Sider)
+Vue.component('Header', Header)
+Vue.component('Content', Content)
+Vue.component('Footer', Footer)
 
 Vue.mixin(Title)
 
